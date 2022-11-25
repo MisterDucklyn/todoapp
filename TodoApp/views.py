@@ -44,7 +44,7 @@ def delete(request,id):
         data.delete()
         messages.success(request,'Planın uğurla silindi')
     except:
-        messages.error('Eh yox, sistemdə nəsə bir xəta baş verdi :( ')
+        messages.error(request,'Eh yox, sistemdə nəsə bir xəta baş verdi :( ')
         
     return redirect ('home')
 
